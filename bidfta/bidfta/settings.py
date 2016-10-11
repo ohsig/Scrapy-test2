@@ -14,6 +14,13 @@ BOT_NAME = 'bidfta'
 SPIDER_MODULES = ['bidfta.spiders']
 NEWSPIDER_MODULE = 'bidfta.spiders'
 
+ITEM_PIPELINES = ['bidfta.pipelines.MongoDBPipeline']
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = "27017"
+MONGODB_DB = "bidfta"
+MONGODB_COLLECTION = "items"
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'bidfta (+http://www.yourdomain.com)'
